@@ -1,4 +1,5 @@
 <?php
+ini_set("allow_url_fopen",1);
 // Check for empty fields
 if(empty($_POST['name'])      ||
    empty($_POST['email'])     ||
