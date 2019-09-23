@@ -63,57 +63,60 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/finance4.jpg')">
+  <header class="masthead" style="background-image: url('img/finance3.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>About Me</h1>
-            <span class="subheading">Investing and wealth management - This is what I do.</span>
+          <div class="post-heading">
+            <h1>Welcome to The Financial Fix</h1>
+            <h2 class="subheading">A little bit about me, the blog, and what I intend to write about.</h2>
+            <span class="meta">Posted by <a href="about.html">Dan Fooks</a> on September 23, 2019</span>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <center>
-          <br>
-          <img class="img-fluid" src="img/headshot.png" alt="" width="250">
-          <br>
-          <p>To the reader:</p>
-        </center>
-        <p>Hello, and thank you for visiting my page! My name is Dan, and I am a 20-year-old college student. I am
-          currently working toward a BS in Computer Science, as well as a Minor in Business Administration. I am
-          currently interning for a software security company as a Software Development and Quality Assurance Intern. I
-          also work part time at a golf course, usually once a week. Aside from my two current jobs, I give piano
-          lessons on the side, and also play guitar at restaurants as part of a duo over the Summer. Some ways I like to
-          spend my free time include golfing, fishing, car maintenance, seeing friends, and spending time down the
-          shore.</p>
-        <p>At the age of 16 years old, with the help of my dad, I opened up my first brokerage account, where I could
-          begin to invest my hard-earned money. This is when I began to understand the value of the dollar, and what it
-          can do for you over time when you put it to work. I began to develop savings goals, and realized the
-          importance of saving at a young age. Since then, I have continued to pursue an interest in investing and
-          personal finance, learning more and more about investing strategies and habits.</p>
-        <p>Although I am by no means an expert, I have found tremendous success in growing my money. I believe that
-          investing is essential, and that anyone can learn to safely invest their money. The purpose of this blog is to
-          share my success stories, what I have learned, and my strategies for growing and managing money. </p>
-        <a href="#">
-          <center>
-            <img class="img-fluid" src="img/finance5.png" alt="" width="250">
-          </center>
-        </a>
-        <p><strong>
-            <center>Money is a tool, and it is essential we know how to use it for our greatest possible benefit.
-          </strong></center>
-        </p>
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+          <p>Hello, and welcome to The Financial Fix! This blog’s sole purpose is to educate and inform the reader on
+            various strategies for investing and saving money. I will discuss topics including investing, trading,
+            budgeting, credit cards and credit, saving, and spending. Money management is extremely important to me, and
+            it is a skill many do not have. Successfully managing your money is not difficult, but does require
+            discipline. My first post, the one you’re currently reading, will cover some questions you might have as you
+            explore my page.</p>
+          <p><i>Who does this blog cater to?</i>
+            <p />
+            <p>I have designed this website to cater to all levels of investors and savers. Whether you have shown an
+              interest in money management all
+              your life, or you are a first-time investor (or maybe you know nothing about investing or managing money),
+              you will find
+              benefit in reading this blog. I intend to write to cater to all audiences, spreading financial knowledge
+              that anyone can learn from it. I am a very safe investor, which I will stress in future articles as I tell
+              the reader more about myself and my trading habits.</p>
+            <p><i>How can I suggest a topic?</i></p>
+            <p>Located under the ‘Contact’ menu tab, you are able to send a message about anything you wish, including
+              topic and blog post suggestions, or any general question about the topics I cover on this blog. I am here
+              to answer questions, so never be afraid to ask! I will always send responses to message via email.</p>
+            <p>
+              The site is still being constructed to add some great features, but in the meantime, I will be posting so
+              our readers can enjoy content as we make improvements.
+              More posts will be coming soon; welcome to The Financial Fix!
+            </p>
+
+            <br>
+            <i>
+              <p class="copyright text-muted">Posted by <a href="about.html">Dan Fooks</a> on September 23, 2019.</p>
+            </i>
+        </div>
       </div>
     </div>
-  </div>
+  </article>
 
   <hr>
 
@@ -146,12 +149,20 @@
         document.getElementsByTagName("BODY")[0].style.backgroundColor = "#444"; // body text
         document.getElementById('mainNav').style.backgroundColor = "#444"; // navbar
         document.getElementById('mainNav').style.borderBottom = "#444"; // navbar banner
+
+        document.getElementByClassName('is-fixed').style.color = "white"; // navbar text
+        document.getElementById('mainNav').getElementByClassName('navbar-brand').getElementByClassName('is-fixed').style.color = "white";
         // dividers
         //copyright
       }
       else { //light mode
         transition()
-        document.getElementsByTagName("BODY")[0].style.color = null; // revert body text
+        var size = document.getElementsByClassName('post-title').length;
+        for (var index = 0; index < size; index++) // revert body text
+        {
+          document.getElementsByClassName('post-title')[index].style.color = "black"; // body text
+          document.getElementsByClassName('post-subtitle')[index].style.color = "black"; // body text
+        }
         document.getElementsByTagName("BODY")[0].style.backgroundColor = null; // revert background
         document.getElementById('mainNav').style.backgroundColor = null; // revert navbar background
         document.getElementById('mainNav').style.borderBottom = null; // revert navbar banner
@@ -169,7 +180,6 @@
     }
   </script>
   <!-- end switch code -------------------->
-
 </body>
 
 </html>
