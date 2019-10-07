@@ -91,7 +91,19 @@
   <!-- Main Content -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-8 col-md-10 mx-auto" <div class="post-preview">
+        <div class="post-preview">
+          <a href="Welcome-to-The-Financial-Fix.html">
+            <h2 class="post-title">
+              Building a Killer Roth IRA in One Year
+            </h2>
+            <h3 class="post-subtitle">
+                How to create a Roth IRA and reach the maximum contribution within 365 days.
+            </h3>
+          </a>
+          <p class="post-meta">Posted by <a href="about.html">Dan Fooks</a> on October 7, 2019</p>
+        </div>
+        <hr>
         <div class="post-preview">
           <a href="Netflix-and-its-Role-In-the-Streaming-Wars.html">
             <h2 class="post-title">
@@ -322,101 +334,88 @@
               <p class="post-meta">Posted by <a href="about.html">Dan Fooks</a> on September 23, 2019</p>
             </div>
             <hr>
-            <div class="post-preview">
-              <div class="post-preview">
-                <a href="Welcome-to-The-Financial-Fix.html">
-                  <h2 class="post-title">
-                    Welcome to The Financial Fix
-                  </h2>
-                  <h3 class="post-subtitle">
-                    A little bit about me, the blog, and what I intend to write about.
-                  </h3>
-                </a>
-                <p class="post-meta">Posted by <a href="about.html">Dan Fooks</a> on September 23, 2019</p>
-              </div>
-              <hr>
 
-              <!-- Pager -->
-              <div class="clearfix">
-                <a class="btn btn-primary float-right" href="blog.html">All Posts &rarr;</a>
-              </div>
+            <!-- Pager -->
+            <div class="clearfix">
+              <a class="btn btn-primary float-right" href="blog.html">All Posts &rarr;</a>
             </div>
           </div>
         </div>
+      </div>
 
-        <hr>
+      <hr>
 
-        <!-- Footer -->
-        <footer>
-          <center>
-            <a href="https://www.instagram.com/thefinancialfix" target="_blank"><img class="img-fluid"
-                src="img/instagramLogo.png" alt="" width="35"></a>
-            <a href="https://www.linkedin.com/in/daniel-fooks/" target="_blank"><img class="img-fluid"
-                src="img/LinkedInLogo.png" alt="" width="35"></a>
-          </center>
-          <p class="copyright text-muted">Copyright &copy; The Financial Fix 2019</p>
-        </footer>
+      <!-- Footer -->
+      <footer>
+        <center>
+          <a href="https://www.instagram.com/thefinancialfix" target="_blank"><img class="img-fluid"
+              src="img/instagramLogo.png" alt="" width="35"></a>
+          <a href="https://www.linkedin.com/in/daniel-fooks/" target="_blank"><img class="img-fluid"
+              src="img/LinkedInLogo.png" alt="" width="35"></a>
+        </center>
+        <p class="copyright text-muted">Copyright &copy; The Financial Fix 2019</p>
+      </footer>
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Custom scripts for this template -->
-        <script src="js/clean-blog.min.js"></script>
+      <!-- Custom scripts for this template -->
+      <script src="js/clean-blog.min.js"></script>
 
 
-        <!-- switch code -------------------->
-        <script>
-          var checkbox = document.getElementById('switch');
-          checkbox.addEventListener('change', function () {
-            if (this.checked || darkMode == 'TRUE') { //dark mode
-              Cookies.set('darkMode', 'TRUE');
-              transition()
-              var size = document.getElementsByClassName('post-title').length;
-              for (var index = 0; index < size; index++) // body text
-              {
-                document.getElementsByClassName('post-title')[index].style.color = "white"; // body text
-                document.getElementsByClassName('post-subtitle')[index].style.color = "white"; // body text
-              }
-              document.getElementsByTagName("BODY")[0].style.backgroundColor = "#444"; // background
-              document.getElementsByTagName("BODY")[0].style.color = "white"; // body text
-              document.getElementById('mainNav').style.backgroundColor = "#444"; // navbar
-              document.getElementById('mainNav').style.borderBottom = "#444"; // navbar banner
-              document.getElementById('mainNav').style.color = "white"; // navbar banner
-
-              // navbar text
-
-              // dividers
-              //copyright
+      <!-- switch code -------------------->
+      <script>
+        var checkbox = document.getElementById('switch');
+        checkbox.addEventListener('change', function () {
+          if (this.checked || darkMode == 'TRUE') { //dark mode
+            Cookies.set('darkMode', 'TRUE');
+            transition()
+            var size = document.getElementsByClassName('post-title').length;
+            for (var index = 0; index < size; index++) // body text
+            {
+              document.getElementsByClassName('post-title')[index].style.color = "white"; // body text
+              document.getElementsByClassName('post-subtitle')[index].style.color = "white"; // body text
             }
-            else { //light mode
-              Cookies.set('darkMode', 'FALSE');
-              transition()
-              var size = document.getElementsByClassName('post-title').length;
-              for (var index = 0; index < size; index++) // revert body text
-              {
-                document.getElementsByClassName('post-title')[index].style.color = "black"; // body text
-                document.getElementsByClassName('post-subtitle')[index].style.color = "black"; // body text
-              }
-              document.getElementsByTagName("BODY")[0].style.backgroundColor = null; // revert background
-              document.getElementsByTagName("BODY")[0].style.color = null; // revert body text
-              document.getElementById('mainNav').style.backgroundColor = null; // revert navbar background
-              document.getElementById('mainNav').style.borderBottom = null; // revert navbar banner
-              document.getElementsByTagName("hr").style.backgroundColor = null; // revert background
-              // revert dividers
-              // revert copyright
-            }
-          })
+            document.getElementsByTagName("BODY")[0].style.backgroundColor = "#444"; // background
+            document.getElementsByTagName("BODY")[0].style.color = "white"; // body text
+            document.getElementById('mainNav').style.backgroundColor = "#444"; // navbar
+            document.getElementById('mainNav').style.borderBottom = "#444"; // navbar banner
+            document.getElementById('mainNav').style.color = "white"; // navbar banner
 
-          let transition = () => {
-            document.documentElement.classList.add('transition');
-            window.setTimeout(() => {
-              document.documentElement.classList.remove('transition')
-            }, 1000)
+            // navbar text
+
+            // dividers
+            //copyright
           }
-        </script>
-        <!-- end switch code -------------------->
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+          else { //light mode
+            Cookies.set('darkMode', 'FALSE');
+            transition()
+            var size = document.getElementsByClassName('post-title').length;
+            for (var index = 0; index < size; index++) // revert body text
+            {
+              document.getElementsByClassName('post-title')[index].style.color = "black"; // body text
+              document.getElementsByClassName('post-subtitle')[index].style.color = "black"; // body text
+            }
+            document.getElementsByTagName("BODY")[0].style.backgroundColor = null; // revert background
+            document.getElementsByTagName("BODY")[0].style.color = null; // revert body text
+            document.getElementById('mainNav').style.backgroundColor = null; // revert navbar background
+            document.getElementById('mainNav').style.borderBottom = null; // revert navbar banner
+            document.getElementsByTagName("hr").style.backgroundColor = null; // revert background
+            // revert dividers
+            // revert copyright
+          }
+        })
+
+        let transition = () => {
+          document.documentElement.classList.add('transition');
+          window.setTimeout(() => {
+            document.documentElement.classList.remove('transition')
+          }, 1000)
+        }
+      </script>
+      <!-- end switch code -------------------->
+      <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
 </body>
 
