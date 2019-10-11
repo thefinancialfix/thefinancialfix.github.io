@@ -74,54 +74,77 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/finance4.jpg')">
+  <header class="masthead" style="background-image: url('img/typing.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>About Me</h1>
-            <span class="subheading">Investing and wealth management - This is what I do.</span>
+          <div class="post-heading">
+            <h1>Referral Links</h1>
+            <span class="subheading">Earn more when you sign up by utilizing our referral links.</span>
           </div>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- Post Content -->
   <!-- Main Content -->
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <center>
-          <br>
-          <img class="img-fluid" src="img/headshot.png" alt="" width="250">
-          <br>
-          <p>To the reader:</p>
-        </center>
-        <p>Hello, and thank you for visiting my page! My name is Dan, and I am a 20-year-old college student. I am
-          currently working toward a BS in Computer Science, as well as a Minor in Business Administration. I am
-          currently interning for a software security company as a Software Development and Quality Assurance Intern. I
-          also work part time at a golf course, usually once a week. Aside from my two current jobs, I give piano
-          lessons on the side, and also play guitar at restaurants as part of a duo over the Summer. Some ways I like to
-          spend my free time include golfing, fishing, car maintenance, seeing friends, and spending time down the
-          shore.</p>
-        <p>At the age of 16 years old, with the help of my dad, I opened up my first brokerage account, where I could
-          begin to invest my hard-earned money. This is when I began to understand the value of the dollar, and what it
-          can do for you over time when you put it to work. I began to develop savings goals, and realized the
-          importance of saving at a young age. Since then, I have continued to pursue an interest in investing and
-          personal finance, learning more and more about investing strategies and habits.</p>
-        <p>Although I am by no means an expert, I have found tremendous success in growing my money. I believe that
-          investing is essential, and that anyone can learn to safely invest their money. The purpose of this blog is to
-          share my success stories, what I have learned, and my strategies for growing and managing money. </p>
-        <a href="#">
-          <center>
-            <img class="img-fluid" src="img/finance5.png" alt="" width="250">
-          </center>
-        </a>
-        <p><strong>
-            <center>Money is a tool, and it is essential we know how to use it for our greatest possible benefit.
-          </strong></center>
-        </p>
+        <div class="post-preview">
+          <a href="http://invite.robinhood.com/danielf960" target="_blank">
+            <h2 class="post-title">
+              Robinhood
+            </h2>
+            <h3 class="post-subtitle">
+              Robinhood is a great brokerage for beginning or intermediate traders and investors. Sign up using our
+              referral link to <b>receive free stock</b>.
+            </h3>
+          </a>
+        </div>
+        <hr>
+        <div class="post-preview">
+          <a href="http://refer.discover.com/s/ddjxzg" target="_blank">
+            <h2 class="post-title">
+              Discover it Card
+            </h2>
+            <h3 class="post-subtitle">
+              A great credit card offering doubled cash back after the first year, as well as 5% cash back rotational
+              categories. Sign up using our referral link to <b>receive $50 via statement credit</b>.
+            </h3>
+          </a>
+        </div>
+        <hr>
+        <div class="post-preview">
+          <a href="https://www.referyourchasecard.com/2/EJGKLYIECB" target="_blank">
+            <h2 class="post-title">
+              Chase Freedom Card
+            </h2>
+            <h3 class="post-subtitle">
+              A great card that offers great rotational categories. Chase doesn't reward you for signing up with our
+              link, but we will. Sign up using our referral link and <b>receive $25 via Venmo, Cash App, or Apple
+                Cash</b>.
+            </h3>
+          </a>
+        </div>
+        <hr>
+        <div class="post-preview">
+          <a href="contact.html" target="_blank">
+            <h2 class="post-title">
+              TD Bank
+            </h2>
+            <h3 class="post-subtitle">
+              A great banking option for students with no fees and no minimum balances. If you are interested in opening
+              a TD account, send us a message letting us know and <b>receive $50 in your new account</b>.
+            </h3>
+          </a>
+        </div>
+        <hr>
+
+
+
       </div>
     </div>
   </div>
@@ -153,8 +176,13 @@
     checkbox.addEventListener('change', function () {
       if (this.checked) { //dark mode
         transition()
-        document.getElementsByTagName("BODY")[0].style.color = "#fff"; // background
-        document.getElementsByTagName("BODY")[0].style.backgroundColor = "#444"; // body text
+        var size = document.getElementsByClassName('post-title').length;
+        for (var index = 0; index < size; index++) // body text
+        {
+          document.getElementsByClassName('post-title')[index].style.color = "white"; // body text
+          document.getElementsByClassName('post-subtitle')[index].style.color = "white"; // body text
+        }
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "#444"; // background
         document.getElementById('mainNav').style.backgroundColor = "#444"; // navbar
         document.getElementById('mainNav').style.borderBottom = "#444"; // navbar banner
         // dividers
@@ -162,7 +190,12 @@
       }
       else { //light mode
         transition()
-        document.getElementsByTagName("BODY")[0].style.color = null; // revert body text
+        var size = document.getElementsByClassName('post-title').length;
+        for (var index = 0; index < size; index++) // revert body text
+        {
+          document.getElementsByClassName('post-title')[index].style.color = "black"; // body text
+          document.getElementsByClassName('post-subtitle')[index].style.color = "black"; // body text
+        }
         document.getElementsByTagName("BODY")[0].style.backgroundColor = null; // revert background
         document.getElementById('mainNav').style.backgroundColor = null; // revert navbar background
         document.getElementById('mainNav').style.borderBottom = null; // revert navbar banner
